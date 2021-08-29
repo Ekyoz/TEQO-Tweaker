@@ -4,3 +4,13 @@ a{transition: 0.12s;}
 a:hover{
     padding-left: 10px;
 }
+
+#plan1{
+position: relative;
+z-index: 0;
+}
+
+#state{
+    position: absolute;
+    z-index: 1;
+}

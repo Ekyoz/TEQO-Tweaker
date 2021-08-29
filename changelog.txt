@@ -1,1 +1,1 @@
-added connection detection
+Added connection detection

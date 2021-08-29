@@ -25,10 +25,14 @@ function checkState(){
     console.log(message);
     if (message.includes("connected")){
       $("#disconnected-img").remove()
-      $("#state").append('<img src="../img/check.png" alt="" style="margin-bottom: 80px; margin-top: 60px; height: 130px; width:auto" id="connected-img">')
+      $("#disconnected-txt").remove()
+      $("#state").append('<img src="../img/check.png" alt="" style="width: 90px; margin-left: 945px; margin-top: 290px;" id="connected-img">')
+      $("#status").append('<p id="connected-txt" style="color: green; font-weight: normal; text-align: center; font-size: 18px;">Connected</p>')
     } else {
       $("#connected-img").remove()
-      $("#state").append('<img src="../img/bouton-croix.png" alt="" style="margin-bottom: 80px; margin-top: 60px;" id="disconnected-img">')
+      $("#connected-txt").remove()
+      $("#state").append('<img src="../img/bouton-croix.png" alt="" style="width: 90px; margin-left: 945px; margin-top: 290px;" id="disconnected-img">')
+      $("#status").append('<p id="disconnected-txt" style="color: red; font-weight: normal; text-align: center; font-size: 18px;">Disconnected</p>')
     }
   }); 
 }
