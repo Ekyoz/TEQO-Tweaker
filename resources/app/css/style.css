@@ -1,0 +1,6 @@
+html, body {margin: 0; height: 100%; overflow: hidden}
+
+a{transition: 0.12s;}
+a:hover{
+    padding-left: 10px;
+}

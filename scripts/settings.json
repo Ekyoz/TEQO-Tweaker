@@ -1,0 +1,42 @@
+{
+        "settings": {
+                "lang": "fr-FR",
+                "theme": "dark",
+                "wifi": {
+                        "ssid": "qzdqz",
+                        "mdp": "qzdzqdqd"
+                }
+        },
+        "profiles": {
+                "default": {
+                        "active": "yes",
+                        "name": "Bureau",
+                        "app": "c:/qdzqd/qzdqzd/qzdqzd/opera.exe",
+                        "logo": "opera.png",
+                        "midi": "yes",
+                        "screen": {
+                                "page1": "P01",
+                                "page2": "P02"
+                        },
+                        "buttons": {
+                                "btn_1": "action_1",
+                                "btn_2": "action_5",
+                                "btn_3": "action_3",
+                                "btn_4": "action_8"
+                        },
+                        "potentiometres": {
+                                "ptn_1": null,
+                                "ptn_2": null,
+                                "ptn_3": null,
+                                "ptn_4": null
+                        },
+                        "sliders": {
+                                "sld_1": "master",
+                                "sld_2": "opera.exe",
+                                "sld_3": "spotify",
+                                "sld_4": null
+                        }
+                }
+        }
+        
+}
