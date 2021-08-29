@@ -16,7 +16,7 @@ usb.on('detach', function(device) {
 
 function checkState(){
   let options = {
-    pythonPath: 'scripts/venv/Scripts/python.exe',
+    pythonPath: 'scripts/python/python.exe',
   };
 
   let pyshell = new PythonShell('scripts/ConnectionChecker.py', options);
