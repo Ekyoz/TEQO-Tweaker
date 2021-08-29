@@ -1,23 +1,11 @@
 {
-        "settings": {
-                "lang": "fr-FR",
-                "theme": "dark",
-                "wifi": {
-                        "ssid": "qzdqz",
-                        "mdp": "qzdzqdqd"
-                }
-        },
         "profiles": {
                 "default": {
-                        "active": "yes",
-                        "name": "Bureau",
+                        "active": "true",
+                        "name": "Desktop",
                         "app": "c:/qdzqd/qzdqzd/qzdqzd/opera.exe",
                         "logo": "opera.png",
-                        "midi": "yes",
-                        "screen": {
-                                "page1": "P01",
-                                "page2": "P02"
-                        },
+                        "midi": "true",
                         "buttons": {
                                 "btn_1": "action_1",
                                 "btn_2": "action_5",

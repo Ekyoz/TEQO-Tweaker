@@ -1,7 +1,15 @@
 const {PythonShell} = require('../../../node_modules/python-shell');
 window.$ = window.jQuery = require('../../../node_modules/jquery/dist/jquery.min.js');
-var usb = require('../../../node_modules/usb');
+//var usb = require('../../../node_modules/usb');
+const fs = require('fs')
 
+fs.readFile('changelog.txt', 'utf8' , (err, data) => {
+    if (err) {
+      console.error(err)
+      return
+    }
+    $("#changelog").text(data)
+  })
 
 checkState(); 
 
