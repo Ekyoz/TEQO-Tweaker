@@ -13,7 +13,7 @@ const defaultStages = {
 
 const updateOptions = {
     gitRepo: "TEQO-Tweaker", // [Required] Your Repo Name
-    gitUsername: "mizu-cmd",  // [Required] Your GitHub Username.
+    gitUsername: "Ekyoz",  // [Required] Your GitHub Username.
 
     appName: "TEQO-Tweaker", //[Required] The Name of the app archive and the app folder.
     appExecutableName: "TEQO Tweaker.exe", //[Required] The Executable of the Application to be Run after updating.
