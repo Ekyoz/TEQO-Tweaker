@@ -1,6 +1,5 @@
 <!DOCTYPE html>
   <html>
-
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,14 +7,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/renderer/index_renderer.js"></script>
-
+    <link rel="stylesheet" href="../css/style.css">
   </head>
-
   <body>
     <div class="columns">
       <div class="column is-one-fifth has-background-light"  style="height: 700px">
         <section class="section">
-            <div class="container">
+            <div class="container" style="z-index: 96;">
                 <aside class="menu">
                     <p class="menu-label">
                       General
@@ -58,29 +56,29 @@
               <p style="font-weight: bold; text-align: center; margin-top: 5px; font-size: 20px;">News :</p>
               <div style="text-align: left; margin-left: 10px;">
                 <li id="changelog" style="font-weight: normal; margin-top: 10px; margin-bottom: 10px;">
+                </div>
+              </div>
+              <div class="has-background-light" style="border-radius: 9px; height: 225px;">
+                <p style="font-weight: bold; margin-bottom: 10px; text-align: center; margin-top: 5px; font-size: 20px;">Profiles :</p>
+                <div style="text-align: left; margin-left: 10px;">
+                  <li style="margin-bottom: 5px; ">Desktop</li>
+                  <li>Game</li>
+                </div>
+              </div>
+              <div style="margin-top: 10px;">
+                <p id="status" style="font-weight: bolder; text-align: center;">Status :<p/>
+                </div>
+              </div>
+              <div class="column is-one is-offset-0 has-background-light" style=" border-radius: 9px; margin-left: 25px; height: 550px;">
+                <p style="text-align: center; font-weight: bold; font-size: 30px;">Current profile:</p>
+                <p id="profile" style="text-align: center; font-size: 20px;">Desktop</p>
+                <center>
+                  <img src="../img/mashup.png" style="margin-top: 40px; text-align: center;">
+                </center>
               </div>
             </div>
-            <div class="has-background-light" style="border-radius: 9px; height: 225px;">
-              <p style="font-weight: bold; margin-bottom: 10px; text-align: center; margin-top: 5px; font-size: 20px;">Profiles :</p>
-              <div style="text-align: left; margin-left: 10px;">
-                <li style="margin-bottom: 5px; ">Desktop</li>
-                <li>Game</li>
-              </div>
-            </div>
-            <div style="margin-top: 10px;">
-              <p id="status" style="font-weight: bolder; text-align: center;">Status :<p/>
-            </div>
           </div>
-          <div class="column is-one is-offset-0 has-background-light" style=" border-radius: 9px; margin-left: 25px; height: 550px;">
-            <p style="text-align: center; font-weight: bold; font-size: 30px;">Current profile:</p>
-            <p id="profile" style="text-align: center; font-size: 20px;">Desktop</p>
-            <center>
-              <img src="../img/mashup.png" style="margin-top: 40px; text-align: center;">
-            </center>
-          </div>
+          <div id="state"></div>
         </div>
-      </div>
-      <div id="state"></div>
   </body>
-
   </html>

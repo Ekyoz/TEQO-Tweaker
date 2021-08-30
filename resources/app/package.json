@@ -5,12 +5,17 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron . "
+    "start": "electron ."
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "electron": "^13.2.3",
+    "jquery": "latest",
     "uaup-js": "latest",
-    "jquery": "latest"
+    "usb-detection": "^4.10.0"
+  },
+  "devDependencies": {
+    "electron-rebuild": "^3.2.2"
   }
 }

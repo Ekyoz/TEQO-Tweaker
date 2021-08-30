@@ -1,7 +1,8 @@
-const {app, BrowserWindow, session} = require('electron')
+const {app, BrowserWindow} = require('electron')
 const {ipcMain} = require('electron');
 
 app.on('ready', () => {
+    app.allowRendererProcessReuse = false
     global.mainWindow = new BrowserWindow({
     width: 1200,
     height: 600,
