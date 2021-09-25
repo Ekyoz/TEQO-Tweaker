@@ -4,7 +4,7 @@ from getJson import getAction
 
 
 if __name__ == "__main__":
-    while True:
+    while False:
         if pot1() != ValActPot1:
             action = getAction()
 

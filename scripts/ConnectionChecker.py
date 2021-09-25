@@ -8,7 +8,6 @@ arduino_ports = [
     if 'Arduino' in p.description
 ]
 
-
 if not arduino_ports:
     print("No arduino found")
 if len(arduino_ports) > 1:

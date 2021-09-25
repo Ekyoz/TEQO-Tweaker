@@ -3,6 +3,8 @@ window.$ = window.jQuery = require('../../../node_modules/jquery/dist/jquery.min
 var usbDetect = require('../../../node_modules/usb-detection');
 const fs = require('fs')
 
+
+
 $(document).ready(function(){
   $(".pageloader").addClass('is-active')
   setTimeout(function() {
@@ -11,6 +13,7 @@ $(document).ready(function(){
     $(".pageloader").removeClass('is-active')
   }, 1000);
 })
+
 
 fs.readFile('changelog.txt', 'utf8' , (err, data) => {
     if (err) {

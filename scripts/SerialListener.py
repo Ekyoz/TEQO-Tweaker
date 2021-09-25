@@ -30,9 +30,9 @@ def slide1():
     pos2 = rawdata.find(";")
     cleanPass = rawdata[pos1:pos2]
     clean = cleanPass[1:]
-    dataPot2=round(int(float(clean))/1023,2)
     return dataPot2
 
+    dataPot2=round(int(float(clean))/1023,2)
 def slide2():
     rawdata = str(port().readline())
     pos1 = rawdata.find(";")
@@ -50,6 +50,19 @@ def slide3():
     clean = cleanPass[1:]
     dataPot4=round(int(float(clean))/1023,2)
     return dataPot4
+
+def isSlidesChanging():
+    if slide() != ValActPot1:
+        return "slider_1"
+
+    if slide1() != ValActPot2:
+        return "slider_2"
+
+    if slide2() != ValActPot2:
+        return "slider_3"
+
+    if slide3() != ValActPot3:
+        return "slider_4"
 
 ValActPot1 = slide()
 ValActPot2 = slide1()
