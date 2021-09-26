@@ -1,9 +1,30 @@
-html, body {margin: 0; height: 100%; overflow: hidden}
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    color: black;
+}
 
-a{transition: 0.12s;}
-a:hover{
+a{
+    transition: 0.12s;
+    color: black;
+
+}
+.padding:hover{
     padding-left: 10px;
 }
+
+.zoom{
+    transition: 0.12s;
+}
+.zoom::after{
+    transform: scale(0);
+}
+
+.zoom:hover{
+    transform: scale(1.1);
+}
+
 
 #plan1{
 position: relative;
@@ -13,4 +34,8 @@ z-index: 0;
 #state{
     position: absolute;
     z-index: 1;
+}
+
+.shadow{
+    box-shadow: 5px 5px 15px #626262;
 }

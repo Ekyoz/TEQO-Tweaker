@@ -22,19 +22,19 @@
                       General
                     </p>
                     <ul class="menu-list">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html" class="padding">Home</a></li>
                     </ul>
                     <p class="menu-label">
                         Bindings
                     </p>
                     <ul class="menu-list">
-                        <li><a href="bindings.html">Bindings</a></li>
+                        <li><a href="bindings.html" class="padding">Bindings</a></li>
                     </ul>
                     <p class="menu-label">
                         Profiles
                     </p>
                     <ul class="menu-list">
-                      <li><a>Profiles</a></li>
+                      <li><a class="padding">Profiles</a></li>
                     </ul>
                     <p class="menu-label">
                         Settings
@@ -42,9 +42,9 @@
                     <ul class="menu-list">
                       <li>
                         <ul>
-                          <li><a>Members</a></li>
-                          <li><a>Plugins</a></li>
-                          <li><a>Add a member</a></li>
+                          <li><a class="padding">Members</a></li>
+                          <li><a class="padding">Plugins</a></li>
+                          <li><a class="padding">Add a member</a></li>
                         </ul>
                       </li>
                     </ul>
@@ -55,33 +55,39 @@
       <div id="plan1" class="column" style="padding: 50px">
         <div class="columns">
           <div class="column is-3 " style="border-radius: 9px;">
-            <div class="has-background-light" style="border-radius: 9px; height: 225px; margin-top: 5px; margin-bottom: 20px;">
+            <div class="shadow" style="border-radius: 9px; height: 225px; margin-top: 5px; margin-bottom: 20px; background-color: #F0F0F0;">
               <p style="font-weight: bold; text-align: center; margin-top: 5px; font-size: 20px;">News :</p>
               <div style="text-align: left; margin-left: 10px;">
                 <li id="changelog" style="font-weight: normal; margin-top: 10px; margin-bottom: 10px;">
-                </div>
-              </div>
-              <div class="has-background-light" style="border-radius: 9px; height: 225px;">
-                <p style="font-weight: bold; margin-bottom: 10px; text-align: center; margin-top: 5px; font-size: 20px;">Profiles :</p>
-                <div style="text-align: left; margin-left: 10px;">
-                  <li style="margin-bottom: 5px; ">Desktop</li>
-                  <li>Game</li>
-                </div>
-              </div>
-              <div style="margin-top: 10px;">
-                <p id="status" style="font-weight: bolder; text-align: center;">Status :<p/>
-                </div>
-              </div>
-              <div class="column is-one is-offset-0 has-background-light" style=" border-radius: 9px; margin-left: 25px; height: 550px;">
-                <p style="text-align: center; font-weight: bold; font-size: 30px;">Current profile:</p>
-                <p id="profile" style="text-align: center; font-size: 20px;">Desktop</p>
-                <center>
-                  <img src="../img/mashup.png" style="margin-top: 40px; text-align: center;">
-                </center>
               </div>
             </div>
+            <div class="shadow" style="border-radius: 9px; height: 225px; background-color: #F0F0F0;">
+              <p style="font-weight: bold; margin-bottom: 10px; text-align: center; margin-top: 5px; font-size: 20px;">Profiles :</p>
+              <div style="text-align: left; margin-left: 10px;">
+                <li style="margin-bottom: 5px; "><a href="profiles.html" class="padding">Desktop</a></li>
+                <li><a class="padding" href="profiles.html">Game</a></li>
+                <li><a class="padding" href="profiles.html">Spotify</a></li>
+                <li><a class="padding" href="profiles.html">Default</a></li>
+              </div>
+            </div>
+            <div style="margin-top: 10px;">
+              <p id="status" style="font-weight: bolder; text-align: center;">Status :<p/>
+            </div>
           </div>
-          <div id="state"></div>
+          <div class="column is-one is-offset-0 shadow" style=" border-radius: 9px; margin-left: 25px; height: 550px;  background-color: #F0F0F0;">
+            <center>
+              <p class="zoom" ><a href="profiles.html" style="text-align: center; font-weight: bold; font-size: 30px">Current profile:</a></p>
+              <p class="zoom"><a href="profiles.html" id="profile" style="text-align: center; font-size: 20px">Desktop</a></p>
+            </center>
+            <center>
+              <a href="bindings.html" >
+                <img class="zoom" src="../img/mashup.png" style="margin-top: 40px; text-align: center;">
+              </a>
+            </center>
+          </div>
         </div>
+      </div>
+      <div id="state"></div>
+    </div>
   </body>
-  </html>
+</html>
