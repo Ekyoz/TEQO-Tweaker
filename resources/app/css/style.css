@@ -8,23 +8,14 @@ html, body {
 a{
     transition: 0.12s;
     color: black;
-
-}
-.padding:hover{
-    padding-left: 10px;
 }
 
-.zoom{
-    transition: 0.12s;
-}
-.zoom::after{
-    transform: scale(0);
-}
+.padding:hover{padding-left: 10px;}
 
-.zoom:hover{
-    transform: scale(1.1);
-}
 
+.zoom{transition: 0.12s;}
+.zoom::after{transform: scale(0);}
+.zoom:hover{transform: scale(1.1);}
 
 #plan1{
 position: relative;
