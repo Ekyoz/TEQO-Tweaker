@@ -1,14 +1,14 @@
 from changeVolume import *
 from SerialListener import *
 from getJson import getAction
-
+from scripts.Actions import volume_app
 
 if __name__ == "__main__":
-    while False:
-        if pot1() != ValActPot1:
-            action = getAction()
+    while True:
+        if slide() != ValActPot1:
+            volume_app("spotify.exe")
 
-        if pot2() != ValAct2:
+        if slide1() != ValActPot2:
             if action("pot2") == "None" or "master" or "process":
                 if action("pot2") == "master":
                     changeMasterVolume(pot2())
@@ -18,7 +18,7 @@ if __name__ == "__main__":
                 print("Error in settings.json!")
 
 
-        if pot3() != ValAct3:
+        if slide2() != ValActPot3:
             if action("pot3") == "None" or "master" or "process":
                 if action("pot3") == "master":
                     changeMasterVolume(pot3())
@@ -28,7 +28,7 @@ if __name__ == "__main__":
                 print("Error in settings.json!")
 
 
-        if pot4() != ValAct4:
+        if slide3() != ValActPot4:
             if action("pot4") == "None" or "master" or "process":
                 if action("pot4") == "master":
                     changeMasterVolume(pot4())

@@ -14,37 +14,40 @@
     <div class="pageloader is-bottom-to-top" style="transition: 0.24px;"><span class="title">Loading</span></div>
 
     <div class="columns">
-      <div class="column is-one-fifth has-background-light"  style="height: 700px">
+      <div class="column is-one-fifth has-background-light"  style="height: 700px; width: 260px;">
         <section class="section">
-            <div class="container" style="z-index: 96;">
+            <div class="container" style="z-index: 96">
                 <aside class="menu">
-                    <p class="menu-label">
-                      General
-                    </p>
                     <ul class="menu-list">
-                        <li><a href="index.html" class="padding">Home</a></li>
+                      <li class="container" style="margin-left: 5px;"><a href="index.html" class="padding"><img class="ul-center" src="../img/home-ico.png" style="height: 25px;">Home</a></li>
                     </ul>
-                    <p class="menu-label">
-                        Bindings
-                    </p>
+
                     <ul class="menu-list">
-                        <li><a href="bindings.html" class="padding">Bindings</a></li>
+                      <li class="container" style="margin-left: 5px;"><a href="profiles.html" class="padding"><img class="ul-center" src="../img/profil-ico.png" style="height: 25px;">Profiles</a></li>
                     </ul>
-                    <p class="menu-label">
-                        Profiles
+                    <br>
+                    <p class="menu-label container-center" style="font-weight: 600; margin-left: 20px; margin-right: 20px;"><img class="p-center" src="../img/devices-ico.png" style="height: 20px;">
+                      Device
                     </p>
+
                     <ul class="menu-list">
-                      <li><a class="padding">Profiles</a></li>
+                      <li>
+                        <ul>
+                          <li class="container" style="margin-left: 20px;"><a href="devices.html" class="padding"><img class="ul-center" src="../img/sond-table-ico.png" style="height: 25px;">Mashup</a></li>
+                        </ul>
+                      </li>
                     </ul>
-                    <p class="menu-label">
-                        Settings
+
+                    <br>
+                    <p class="menu-label container-center" style="font-weight: 600; margin-left: 20px; margin-right: 20px;"><img class="p-center" src="../img/settings-ico.png" style="height: 20px;">
+                      Settings
                     </p>
                     <ul class="menu-list">
                       <li>
                         <ul>
-                          <li><a class="padding">Members</a></li>
-                          <li><a class="padding">Plugins</a></li>
-                          <li><a class="padding">Add a member</a></li>
+                          <li class="container"><a class="padding">Members</a></li>
+                          <li class="container"><a class="padding">Plugins</a></li>
+                          <li class="container"><a class="padding">Add a member</a></li>
                         </ul>
                       </li>
                     </ul>
@@ -58,7 +61,7 @@
             <div class="shadow" style="border-radius: 9px; height: 225px; margin-top: 5px; margin-bottom: 20px; background-color: #F0F0F0;">
               <p style="font-weight: bold; text-align: center; margin-top: 5px; font-size: 20px;">News :</p>
               <div style="text-align: left; margin-left: 10px;">
-                <li id="changelog" style="font-weight: normal; margin-top: 10px; margin-bottom: 10px;">Add qzdqjzd</li>
+                <li id="changelog" style="font-weight: normal; margin-top: 10px; margin-bottom: 10px;"></li>
               </div>
             </div>
             <div class="shadow" style="border-radius: 9px; height: 225px; background-color: #F0F0F0;">
@@ -80,7 +83,7 @@
               <p class="zoom"><a href="profiles.html" id="profile" style="text-align: center; font-size: 20px">Desktop</a></p>
             </center>
             <center>
-              <a href="bindings.html">
+              <a href="devices.html">
                 <div id="state"></div>
               </a>
             </center>

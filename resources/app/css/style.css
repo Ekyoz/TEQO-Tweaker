@@ -30,3 +30,31 @@ z-index: 0;
 .shadow{
     box-shadow: 5px 5px 15px #626262;
 }
+
+.container-center {
+    position: relative;
+}
+
+.ul-center {
+position: absolute;
+top: 50%;
+left: -20px;
+-ms-transform: translateY(-50%);
+transform: translateY(-50%);
+}
+
+.p-center {
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    }
+
+.menu-label{
+    font-size: 15px;
+}
+
+.container{
+    font-size: 22px;
+}
