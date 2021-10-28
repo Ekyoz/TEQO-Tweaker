@@ -1,5 +1,7 @@
 const {app, BrowserWindow} = require('electron')
 const {ipcMain} = require('electron');
+const { PythonShell } = require('../../node_modules/python-shell');
+
 
 app.on('ready', () => {
     app.allowRendererProcessReuse = false
@@ -18,10 +20,16 @@ app.on('ready', () => {
     }
   })
 
-  const splash = new BrowserWindow({ width: 500, height: 300 , frame : false, alwaysOnTop: true,     webPreferences: {
-    nodeIntegration: true,
-    contextIsolation: false
-  }});
+  const splash = new BrowserWindow({
+    width: 500,
+    height: 300,
+    frame: false,
+    alwaysOnTop: true,
+    webPreferences: {
+      nodeIntegration: true,
+      contextIsolation: false
+    }
+  });
 
   splash.loadURL(`file://${__dirname}/html/splashscreen.html`);
   mainWindow.loadURL(`file://${__dirname}/html/index.html`);

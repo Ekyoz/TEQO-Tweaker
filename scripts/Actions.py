@@ -1,11 +1,10 @@
 import changeVolume
-import base64
-import requests
 
 def volume_app(lvl: int, app: str):
-    changeVolume.changeProcessVolume(lvl, app)
+    audioController = changeVolume.AudioController(app)
+    audioController.set_volume(int(lvl) / 100)
 
 def volume_master(lvl: int):
-    changeVolume.changeMasterVolume(lvl)
-
+    audioController = changeVolume.AudioController(None)
+    audioController.master(int(lvl) / 100)
 

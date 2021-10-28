@@ -1,34 +1,38 @@
+import re
+import warnings
+from ConnectionChecker import arduino_port
+from Actions import *
 from changeVolume import *
-from SerialListener import *
-from getJson import getAction
-from scripts.Actions import volume_app
+import serial
+
 
 if __name__ == "__main__":
-    while True:
-        if slide() != ValActPot1:
-            volume_app("spotify.exe")
+    arduino_ports = arduino_port()
 
-        if slide1() != ValActPot2:
-            if action("pot2") == "None" or "master" or "process":
-                if action("pot2") == "master":
-                    changeMasterVolume(pot2())
-                if action("pot2") == "process":
-                    changeProcessVolume(pot2(), "pot2")
-            elif action("pot2") != "None" or "master" or "process":
-                print("Error in settings.json!")
+    if not arduino_ports:
+        raise IOError("No Arduino found")
+    if len(arduino_ports) > 1:
+        warnings.warn('Multiple Arduinos found - using the first')
+    elif len(arduino_ports) == 1:
+        arduino = serial.Serial(str(arduino_ports).replace("[", "").replace("'", "").replace("]", ""), 9600)
+        while True:
+            rawdata = str(arduino.readline())
+            if "sld1" in rawdata:
+                val = re.findall(r'\b\d+\b', rawdata)
+                volume_master(int(val[0]))
+            if "sld2" in rawdata:
+                val = re.findall(r'\b\d+\b', rawdata)
+                volume_app(int(val[0]), str("opera.exe"))
+            if "sld3" in rawdata:
+                val = re.findall(r'\b\d+\b', rawdata)
+                volume_app(int(val[0]), str("Spotify.exe"))
+            if "sld4" in rawdata:
+                val = re.findall(r'\b\d+\b', rawdata)
+                volume_app(int(val[0]), str("Discord.exe"))
 
 
-        if slide2() != ValActPot3:
-            if action("pot3") == "None" or "master" or "process":
-                if action("pot3") == "master":
-                    changeMasterVolume(pot3())
-                if action("pot3") == "process":
-                    changeProcessVolume(pot3(), "pot3")
-            elif action("pot3") != "None" or "master" or "process":
-                print("Error in settings.json!")
 
-
-        if slide3() != ValActPot4:
+'''
             if action("pot4") == "None" or "master" or "process":
                 if action("pot4") == "master":
                     changeMasterVolume(pot4())
@@ -36,4 +40,4 @@ if __name__ == "__main__":
                     changeProcessVolume(pot4(), "pot4")
             elif action("pot4") != "None" or "master" or "process":
                 print("Error in settings.json!")
-
+'''

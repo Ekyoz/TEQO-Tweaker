@@ -9,7 +9,7 @@ $(document).ready(function(){
   $(".pageloader").addClass('is-active')
   setTimeout(function() {
     usbDetect.startMonitoring();
-    checkState(); 
+    checkState();
     $(".pageloader").removeClass('is-active')
   }, 1000);
 })
@@ -25,37 +25,39 @@ fs.readFile('changelog.txt', 'utf8' , (err, data) => {
 
 
 usbDetect.on('change', function(device) { 
-   console.log('add', device); 
-   checkState();
-  });
+  console.log('add', device);
+  checkState();
+});
 
-
-function checkState(){
+function checkState() {
   let options = {
     pythonPath: 'scripts/python/python.exe',
   };
+  let pyMain = new PythonShell('scripts/main.py', options);
+  let pyCheker = new PythonShell('scripts/ConnectionChecker.py', options);
 
-  let pyshell = new PythonShell('scripts/ConnectionChecker.py', options);
-
-  pyshell.on('message', function (message) {
+  pyCheker.on('message', function (message) {
     console.log(message);
-    if (message.includes("connected") && $("#connected-img").length == 0){
+    if (message.includes("True") && $("#connected-img").length == 0) {
       $("#disconnected-img").remove()
       $("#disconnected-txt").remove()
       $("#state").append('<img class="zoom" src="../img/mashup-check.png" style="height: 390px; margin-top: 35px; margin-left: 50px; opacity: 0; transition: 0.5" id="connected-img">')
       $("#status").append('<p id="connected-txt" style="color: green; font-weight: normal; text-align: center; font-size: 18px; opacity: 0; transition: 0.24s">Connected</p>')
       $("#connected-img").fadeTo(0.50, 1)
       $("#connected-txt").fadeTo(0.24, 1)
-    } else if($("#disconnected-img").length == 0){
+      pyMain.on('message', function (message) {
+        console.log(message);
+      });
+    } else if ($("#disconnected-img").length == 0) {
       $("#connected-img").remove()
       $("#connected-txt").remove()
       $("#state").append('<img class="zoom" src="../img/mashup-uncheck.png" style="height: 390px; margin-top: 35px; margin-left: 50px; opacity: 0; transition: 0.5" id="disconnected-img">')
       $("#status").append('<p id="disconnected-txt" style="color: red; font-weight: normal; text-align: center; font-size: 18px; opacity: 0; transition: 0.24s">Disconnected</p>')
       $("#disconnected-img").fadeTo(0.50, 1)
       $("#disconnected-txt").fadeTo(0.24, 1)
+      pyMain.end(function (err) {
+        console.log(message);
+      });
     }
   }); 
 }
-
-
-
