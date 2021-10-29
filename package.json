@@ -6,11 +6,14 @@
   "dependencies": {
     "bulma": "^0.9.3",
     "bulma-pageloader": "^0.3.0",
+    "jquery": "^3.6.0",
     "python-shell": "^3.0.0",
     "uaup-js": "^0.0.22",
     "usb-detection": "^4.10.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "electrolytic": "^0.1.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

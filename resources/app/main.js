@@ -1,4 +1,6 @@
-const {app, BrowserWindow} = require('electron')
+const path = require('path')
+const Electrolytic = require('../../node_modules/electrolytic')
+const { app, BrowserWindow, Menu, nativeImage, Tray } = require('electron')
 const {ipcMain} = require('electron');
 const { PythonShell } = require('../../node_modules/python-shell');
 
