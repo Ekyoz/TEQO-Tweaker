@@ -84,11 +84,15 @@ npm start
 
 ### Interface Utilisateur
 
+<img alt="Capture d'écran 2025-10-06 181751" src="https://github.com/user-attachments/assets/ba57f859-ac75-4f0a-ad3e-306fbd808e4c" />
+<img alt="Capture d'écran 2025-10-06 181909" src="https://github.com/user-attachments/assets/6d318665-8d77-4017-a426-d4e058fd4244" />
+
 L'application propose plusieurs pages :
 
 - **Home** : Vue d'ensemble avec le profil actuel et l'état de la connexion
 - **Profiles** : Gestion des différents profils audio (Desktop, Game, Spotify, Default)
 - **Devices** : Configuration et état des périphériques connectés
+
 
 ### Système de Profils
 
